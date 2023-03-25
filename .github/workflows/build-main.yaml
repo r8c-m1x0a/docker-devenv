@@ -31,4 +31,4 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/ruimo/${{ env.IMAGE_NAME }}:latest
+            ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest
