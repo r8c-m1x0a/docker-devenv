@@ -8,6 +8,8 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: docker-devenv
     steps:
       -
         name: Checkout
