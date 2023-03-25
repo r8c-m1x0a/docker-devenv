@@ -3,7 +3,7 @@ name: docker push tag
 on:
   push:
     tags:
-      - *
+      - gcc-*
 
 jobs:
   docker:
