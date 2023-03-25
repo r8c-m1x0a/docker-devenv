@@ -13,7 +13,7 @@ RUN \
 RUN \
   mkdir ~/r8c && \
   cd ~/r8c && \
-  wget https://ftp.gnu.org/gnu/binutils/binutils-${BIN_UTIL_VER}.tar.gz && \
+  wget https://ftp.jaist.ac.jp/pub/GNU/binutils/binutils-${BIN_UTIL_VER}.tar.gz && \
   tar xf binutils-${BIN_UTIL_VER}.tar.gz && \
   cd binutils-${BIN_UTIL_VER} && \
   mkdir m32c_build && \
@@ -26,7 +26,7 @@ RUN \
 
 RUN \
   cd ~/r8c && \
-  wget https://ftp.gnu.org/gnu/gcc/gcc-${GCC_VER}/gcc-${GCC_VER}.tar.gz && \
+  wget https://ftp.jaist.ac.jp/pub/GNU/gcc/gcc-${GCC_VER}/gcc-${GCC_VER}.tar.gz && \
   tar xf gcc-${GCC_VER}.tar.gz && \
   cd gcc-${GCC_VER} && \
   mkdir m32c_build && \
