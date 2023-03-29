@@ -26,6 +26,8 @@ GCC 7.5.0 and later is not able to be built without tweaking. The following chan
 
 GCC does not run without the following patch:
 
+https://gcc.gnu.org/bugzilla//show_bug.cgi?id=83670
+
 https://gcc.gnu.org/bugzilla//attachment.cgi?id=53966
 
 ### Compiler sometimes aborts with -O2.
