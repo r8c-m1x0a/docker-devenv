@@ -7,17 +7,6 @@
 * Add remote development extention to you Visual Studio Code.
 * Open 'vscode' folder by Visual Studio Code then click 'Reopen in Container' button.
 
-## Tags
-
-* gcc-6.5.0<br/>
-GCC 6.5.0
-
-* gcc-7.5.0<br/>
-GCC 7.5.0
-
-* gcc-12.2.0<br/>
-GCC 12.2.0
-
 ## Caveat
 
 GCC 7.5.0 and later is not able to be built without tweaking. The following changes are incomporated:
@@ -38,9 +27,9 @@ While building libraries, the compiler sometimes aborts. Added the following att
 
 ### Removed some files from the library.
 
-Since some functions are not appropriate for R8C M1xAN, removed some files. For example:
+Since some functions cause internal compiler error. As they are not appropriate for R8C M1xAN, removed some files. For example:
 
-* Complex type.
 * File access.
-* Copy on Write strings.
+* Floating numbers.
+* Some printf/scanf functions.
 * ...
