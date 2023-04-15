@@ -8,7 +8,7 @@ ARG NEW_LIB_VER=4.1.0
 RUN \
   apt-get -y update && \
   apt-get -y install texinfo libgmp-dev libmpfr-dev libmpc-dev diffutils automake zlib1g-dev \
-    clang wget build-essential git libboost-dev scons cmake gdb doxygen lcov
+    clang wget build-essential git libboost-dev scons cmake gdb doxygen lcov locales-all
 
 RUN \
   mkdir ~/r8c && \
