@@ -184,3 +184,6 @@ RUN \
   make install && \
   cd ../.. && \
   rm -rf googletest
+
+RUN \
+  mkdir ~/r8c-workspace
