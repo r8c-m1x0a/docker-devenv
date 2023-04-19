@@ -188,4 +188,4 @@ RUN \
 RUN \
   mkdir ~/r8c-workspace
 
-COPY deps.py ~/.scons/site_scons/deps.py
+COPY deps.py /root/.scons/site_scons/deps.py
