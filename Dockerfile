@@ -30,7 +30,6 @@ RUN \
   tar xf gcc-${GCC_VER}.tar.gz && \
   cd gcc-${GCC_VER} && \
   cd libgcc && \
-  rm fp-bit.c; touch fp-bit.c && \
   for i in unwind-*.c; do rm $i; touch $i; done && \
   cd ~/r8c/gcc-${GCC_VER}/gcc/config/m32c && \
   {  \
