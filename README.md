@@ -1,11 +1,6 @@
-# r8c dev environment
+# r8c docker dev environment
 
-## Quick start
-
-* Intall docker.
-* Install Visual Studio Code.
-* Add remote development extention to you Visual Studio Code.
-* Open 'vscode' folder by Visual Studio Code then click 'Reopen in Container' button.
+This is docker image that can be used with Visual Studio Code remote development feature. If you just want to earn files for devcontainer to start your develoment, just go [here](https://github.com/r8c-m1x0a/devenv).
 
 ## Caveat
 
@@ -19,17 +14,15 @@ https://gcc.gnu.org/bugzilla//show_bug.cgi?id=83670
 
 https://gcc.gnu.org/bugzilla//attachment.cgi?id=53966
 
-### Compiler sometimes aborts with -O2.
+### unable to find a register to spill in class 'A_REG'
 
-While building libraries, the compiler sometimes aborts. Added the following attribute to some functions to remedy this.
-
-    __attribute__((optimize("O0")))
+When the compiler cannot find avaibale hardware registers to spill pseudo registers while optimization phase, it aborts compiling. As for the spec (https://gcc.gnu.org/onlinedocs/gccint/RTL-passes.html#RTL-passes), the compile should allocate memory slots on the stack instead of hardware registers. It seems the compiler's defect and I have applied temporary fix against it (reload1.cc). 
 
 ### Removed some files from the library.
 
-Since some functions cause internal compiler error. As they are not appropriate for R8C M1xAN, removed some files. For example:
+Still some library sources cause internal compiler error. As they are not appropriate for R8C M1xAN, removed some files. For example:
 
 * File access.
-* Floating numbers.
+* Floating point numbers.
 * Some printf/scanf functions.
 * ...
